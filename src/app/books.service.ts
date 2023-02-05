@@ -76,7 +76,7 @@ export class BooksService {
       }
 
       else {
-        currentURI = this.Uri+'subject/' + this.keyword + '.json?';
+        currentURI = this.Uri+'subject/' + (this.keyword?.replace(' ', '+')) + '.json?';
       }
 
       //constructing URL with params
