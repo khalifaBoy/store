@@ -1,0 +1,7 @@
+<div class="page">
+    <ng-template search></ng-template>
+    <app-loader *ngIf="bookService.loadingStatus===undefined"></app-loader>
+    <app-book-details *ngIf="bookService.loadingStatus===true" [Books]="books"></app-book-details>
+    <app-pagination *ngIf="bookService.loadingStatus===true"></app-pagination>
+    <h1 *ngIf="bookService.loadingStatus===null" class="message">No data is available</h1>
+</div>

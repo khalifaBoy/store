@@ -1,0 +1,8 @@
+<div class="pagination">
+    <div>
+        <img src="../../../assets/caret-left-solid.svg"><button [disabled]="booksService.getPage()===1" (click)="updatePage(false)">Previous</button>
+    </div>
+    <div>
+        <button [disabled]="booksService.getPage()===booksService.pages" (click)="updatePage(true)">Next</button><img src="../../../assets/caret-right-solid.svg">
+    </div>
+</div>

@@ -1,0 +1,11 @@
+<form class="search-piece" (ngSubmit)="Search()" #heroForm="ngForm">
+    <input type="text" placeholder="{{data.placeholder}}"
+            [(ngModel)]="data.keyword" name="keyword"
+            autofocus required >
+    <div class="btn">
+        <!-- later replace with icon -->
+        <button [disabled]="data.keyword===undefined || data.keyword==='' || data.keyword===null" type="reset" class="reset"></button>
+        <button [disabled]="booksService.loadingStatus===undefined" type="submit" class="search"></button>
+    </div>
+</form>
+

@@ -1,0 +1,20 @@
+<div class="book-table">
+    <div class="row">
+        <div class="book-title">Title and Sub Title</div>
+        <div class="book-author">Author</div>
+        <div (click)="Sort('latest')" class="book-latest">Latest Publish year</div>
+        <div (click)="Sort('first')" class="book-first">First Publish year</div>
+    </div>
+    <!-- numFound,start,title,first_publish_year,author_name,publish_year -->
+    <div *ngFor="let book of Books" class="row">
+        <div class="book-title">{{book.title}}</div>
+
+        <div class="book-author">{{book.author_name ? book.author_name[0] : undefined}}</div>
+
+        <div class="book-latest">{{book.publish_year ? book.publish_year[0] : undefined}}</div>
+
+        <div class="book-first">{{book.first_publish_year}}</div>
+    </div>
+    
+</div>
+   
